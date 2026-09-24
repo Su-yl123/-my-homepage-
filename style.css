@@ -1,0 +1,212 @@
+/* ============================================
+   杨心琪的求职主页 - style.css
+   风格：IT 应届生 · 简约科技风 · 蓝灰主色
+   无外部 CDN，纯原生 CSS
+   ============================================ */
+
+/* ---------- 重置与基础 ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --primary: #0f4c81;        /* 主色：深蓝 */
+  --primary-light: #2e75b6;  /* 辅色：亮蓝 */
+  --accent: #5b9bd5;         /* 点缀：浅蓝 */
+  --bg: #f4f6f9;             /* 页面背景 */
+  --card: #ffffff;           /* 卡片白 */
+  --text: #1f2d3d;           /* 正文 */
+  --muted: #5a6675;          /* 次要文字 */
+  --line: #e2e8f0;           /* 分隔线 */
+  --radius: 12px;
+  --shadow: 0 2px 12px rgba(15, 76, 129, 0.08);
+}
+
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ---------- Banner ---------- */
+.banner {
+  min-height: 420px;
+  background: url("./assets/banner.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 遮罩：让背景图变暗一点，文字更清晰 */
+.banner-mask {
+  background: linear-gradient(135deg, rgba(15,76,129,0.55), rgba(30,60,90,0.35));
+  width: 100%;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.banner-mask h1 {
+  font-size: 3em;
+  color: #fff;
+  letter-spacing: 6px;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.25);
+}
+
+.banner-sub {
+  font-size: 1.15em;
+  color: rgba(255,255,255,0.92);
+  margin-bottom: 6px;
+}
+
+.banner-tagline {
+  font-size: 0.95em;
+  color: rgba(255,255,255,0.8);
+  max-width: 620px;
+  margin-bottom: 24px;
+}
+
+.banner-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+
+.btn {
+  display: inline-block;
+  padding: 10px 26px;
+  border-radius: 999px;
+  font-size: 0.95em;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn:hover { transform: translateY(-2px); }
+
+.btn-primary {
+  background: #fff;
+  color: var(--primary);
+  font-weight: bold;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+.btn-ghost {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.85);
+}
+
+/* ---------- 主体 ---------- */
+main {
+  max-width: 860px;
+  margin: -40px auto 40px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 32px;
+  margin-bottom: 22px;
+}
+
+.card h2 {
+  font-size: 1.25em;
+  color: var(--primary);
+  border-left: 4px solid var(--accent);
+  padding-left: 12px;
+  margin-bottom: 18px;
+}
+
+/* ---------- 个人信息 ---------- */
+.info-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
+.info-list li { display: flex; font-size: 0.95em; }
+.label {
+  display: inline-block;
+  min-width: 60px;
+  color: var(--muted);
+  margin-right: 10px;
+}
+
+/* ---------- 求职意向 ---------- */
+.intent-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.intent-item { font-size: 0.95em; }
+
+/* ---------- 技能 ---------- */
+.skill-group { margin-bottom: 14px; }
+.skill-row { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
+.skill-name { width: 130px; font-weight: bold; font-size: 0.95em; }
+.skill-level { width: 50px; text-align: right; color: var(--muted); font-size: 0.85em; }
+.bar {
+  flex: 1; height: 8px; background: #e8eef5; border-radius: 4px; overflow: hidden;
+}
+.bar i {
+  display: block; height: 100%;
+  background: linear-gradient(90deg, var(--primary-light), var(--accent));
+  border-radius: 4px;
+}
+.skill-desc { font-size: 0.88em; color: var(--muted); padding-left: 142px; margin-bottom: 4px; }
+.tools { margin-top: 12px; font-size: 0.88em; color: var(--muted); }
+
+/* ---------- 项目 ---------- */
+.project {
+  padding: 14px 16px;
+  border-bottom: 1px dashed var(--line);
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.2s;
+}
+.project:last-child { border-bottom: none; padding-bottom: 0; }
+.project:hover {
+  background: #f0f6fc;
+  transform: translateX(4px);
+}
+.project-head { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.project h3 { font-size: 1.05em; color: var(--text); }
+.tag {
+  background: #e8f1fa; color: var(--primary);
+  padding: 3px 10px; border-radius: 999px; font-size: 0.82em; font-weight: bold;
+}
+.tech { font-size: 0.85em; color: var(--primary-light); margin: 6px 0; }
+.project p:last-child { font-size: 0.92em; }
+
+/* ---------- 教育 ---------- */
+.edu-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+.edu h3 { font-size: 1.05em; }
+.period { color: var(--muted); font-size: 0.88em; }
+.major { color: var(--muted); font-size: 0.9em; margin: 4px 0; }
+.courses { font-size: 0.9em; }
+
+/* ---------- 荣誉 ---------- */
+.honor-note { font-size: 0.88em; color: var(--muted); margin-bottom: 8px; }
+.honor-list { list-style: none; }
+.honor-list li {
+  padding: 6px 0;
+  font-size: 0.93em;
+  border-bottom: 1px dashed var(--line);
+}
+.honor-list li:last-child { border-bottom: none; }
+.honor-list b { color: var(--primary); }
+
+/* ---------- 自我评价 ---------- */
+#eval p { font-size: 0.95em; }
+
+/* ---------- 页脚 ---------- */
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85em;
+  padding: 24px 0 40px;
+}
+
+/* ---------- 响应式：手机单列 ---------- */
+@media (max-width: 600px) {
+  .banner-mask h1 { font-size: 2.2em; letter-spacing: 3px; }
+  .info-list, .intent-grid { grid-template-columns: 1fr; }
+  .skill-desc { padding-left: 0; }
+  main { padding: 0 14px; }
+  .card { padding: 20px 18px; }
+}

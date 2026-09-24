@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>杨心琪的求职主页 | Python 方向</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== 1. Banner 头部 ========== -->
+  <header class="banner">
+    <div class="banner-mask">
+      <h1>杨心琪</h1>
+      <p class="banner-sub">大数据技术专业 · 求职 Python 助理方向</p>
+      <p class="banner-tagline">从高中开始写代码，用 Python 独立完成过 Web、桌面与机器学习小项目</p>
+      <div class="banner-actions">
+        <a class="btn btn-primary" href="./assets/resume.pdf" download>下载简历 PDF</a>
+        <button class="btn btn-ghost" id="copyEmail">复制邮箱</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== 2. 个人信息 ========== -->
+    <section class="card" id="about">
+      <h2>个人信息</h2>
+      <ul class="info-list">
+        <li><span class="label">姓名</span>杨心琪</li>
+        <li><span class="label">电话</span>17754437394</li>
+        <li><span class="label">邮箱</span><span id="emailText">3092942629@qq.com</span></li>
+        <li><span class="label">微信</span>Su_ylyl</li>
+        <li><span class="label">城市</span>福州（意向：厦门）</li>
+      </ul>
+    </section>
+
+    <!-- ========== 3. 求职意向 ========== -->
+    <section class="card" id="intent">
+      <h2>求职意向</h2>
+      <div class="intent-grid">
+        <div class="intent-item"><span class="label">目标岗位</span>Python 助理 / 实习生</div>
+        <div class="intent-item"><span class="label">意向公司</span>互拓科技（参考 JD）</div>
+        <div class="intent-item"><span class="label">意向城市</span>厦门</div>
+        <div class="intent-item"><span class="label">到岗时间</span>可面议</div>
+      </div>
+    </section>
+
+    <!-- ========== 4. 专业技能 ========== -->
+    <section class="card" id="skills">
+      <h2>专业技能</h2>
+      <div class="skill-group">
+        <div class="skill-row"><span class="skill-name">Python</span>
+          <div class="bar"><i style="width:85%"></i></div><span class="skill-level">熟练</span></div>
+        <div class="skill-desc">从高中起学习，独立完成停车场系统约200行、图书馆Web系统约800行、糖尿病预测约100行、数据可视化约90行、多线程爬虫约50行。</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-row"><span class="skill-name">MySQL / SQL</span>
+          <div class="bar"><i style="width:80%"></i></div><span class="skill-level">熟练</span></div>
+        <div class="skill-desc">在图书馆 Web 系统与停车场管理系统中实践 SQL 增查、数据库持久化，使用 pymysql 连接 MySQL。</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-row"><span class="skill-name">Java</span>
+          <div class="bar"><i style="width:40%"></i></div><span class="skill-level">了解</span></div>
+        <div class="skill-desc">大学系统学习过 Java 课程。</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-row"><span class="skill-name">算法与数据结构</span>
+          <div class="bar"><i style="width:50%"></i></div><span class="skill-level">基础</span></div>
+        <div class="skill-desc">课程系统学习，在 scikit-learn 回归建模与 Python 项目中持续练习、修正。</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-row"><span class="skill-name">NoSQL</span>
+          <div class="bar"><i style="width:35%"></i></div><span class="skill-level">了解</span></div>
+        <div class="skill-desc">课程学习过 NoSQL 基础。</div>
+      </div>
+      <p class="tools">常用工具：pandas · pyecharts · scikit-learn · tkinter · Jupyter · Chrome DevTools</p>
+    </section>
+
+    <!-- ========== 5. 实训项目经历 ========== -->
+    <section class="card" id="projects">
+      <h2>实训项目经历</h2>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>图书馆动态 Web 系统</h3>
+          <span class="tag">约 800 行 · 验收 100 分</span>
+        </div>
+        <p class="tech">Laragon + MySQL ｜ GET/POST · session 与 cookie · 输入验证 · 用户名密码认证</p>
+        <p>独立完成约 800 行代码并逐项纠错，实现注册、登录、自动登出、搜索、管理员查看跟踪、修改密码与登出等功能；使用 Chrome DevTools 调试，最终验收 100 分。</p>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>学生停车场登记 / 管理系统</h3>
+          <span class="tag">约 200 行</span>
+        </div>
+        <p class="tech">Python + tkinter + pymysql + MySQL ｜ OOP 类 · 正则校验 · SQL 增查 · EXE 打包</p>
+        <p>以面向对象类组织代码约 200 行并打包为 EXE；实现停车登记、车辆注册、基于正则的格式校验、按学生 ID 搜索与排序、数据库持久化与 GUI 交互。</p>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>糖尿病病情预测</h3>
+          <span class="tag">约 100 行</span>
+        </div>
+        <p class="tech">Jupyter ｜ numpy · matplotlib · scikit-learn</p>
+        <p>加载糖尿病数据集并划分训练/测试集，StandardScaler 标准化后构建 LinearRegression、Ridge、Lasso 回归模型，以 MSE 评估，并用散点图与柱状图可视化。</p>
+      </article>
+    </section>
+
+    <!-- ========== 6. 教育背景 ========== -->
+    <section class="card" id="education">
+      <h2>教育背景</h2>
+      <div class="edu">
+        <div class="edu-head">
+          <h3>福州墨尔本理工职业学院</h3>
+          <span class="period">2024.09 – 至今</span>
+        </div>
+        <p class="major">大数据技术 · 班级 24ad_BD1 · 学号 4240102064</p>
+      </div>
+    </section>
+
+    <!-- ========== 7. 证书荣誉 ========== -->
+    <section class="card" id="honors">
+      <h2>证书荣誉</h2>
+      <p class="honor-note">暂无正式证书与竞赛获奖，以下为在校相关课程成绩：</p>
+      <ul class="honor-list">
+        <li>Python 程序设计 · 期末考试 <b>100 分</b></li>
+        <li>Web 开发实训 · 期末验收 <b>100 分</b></li>
+        <li>人工智能训练师 · 期末考试 <b>90 分</b></li>
+        <li>数据可视化技术 · 87 分；机器学习技术应用 · 85 分；大数据应用技术综合实训 · 86 分</li>
+      </ul>
+    </section>
+
+    <!-- ========== 7.5 学习日志（进阶挑战） ========== -->
+    <section class="card" id="log">
+      <h2>最近在学</h2>
+      <ul class="honor-list">
+        <li>🎯 <b>目标两周：</b>把常用算法与数据结构练到使用时不出错——LinearRegression / Ridge / Lasso 已跑通，正在补分类、排序、查找。</li>
+        <li>📖 <b>本周在读：</b>重读图书馆 Web 系统代码，争取每个模块都能当面讲清。</li>
+      </ul>
+    </section>
+
+    <!-- ========== 8. 自我评价 ========== -->
+    <section class="card" id="eval">
+      <h2>自我评价</h2>
+      <p>从高中开始学习 Python，大学持续学习 Java 与 Python，独立完成多个 Python 项目；了解 SQL / NoSQL，并在 MySQL 项目中实践数据库操作与模块开发。热爱编程，有技术学习热情，愿意从助理岗踏实做起，能吃苦、能配合团队完成项目计划。</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 杨心琪 · 本页为本地个人主页，部署后可访问</p>
+  </footer>
+
+  <!-- 原生 JS：一键复制邮箱 -->
+  <script>
+    document.getElementById('copyEmail').addEventListener('click', function () {
+      var email = document.getElementById('emailText').textContent.trim();
+      var btn = this;
+      function done() {
+        var old = btn.textContent;
+        btn.textContent = '已复制 ✓';
+        setTimeout(function () { btn.textContent = old; }, 1500);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(done).catch(function () { fallback(); });
+      } else {
+        fallback();
+      }
+      function fallback() {
+        var ta = document.createElement('textarea');
+        ta.value = email;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); done(); } catch (e) { alert('复制失败，请手动复制：' + email); }
+        document.body.removeChild(ta);
+      }
+    });
+  </script>
+
+</body>
+</html>
